@@ -1,6 +1,6 @@
 ﻿namespace Exam_WinForms
 {
-    partial class Form1
+    partial class View
     {
         /// <summary>
         /// Required designer variable.
@@ -67,6 +67,8 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +82,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Запуск";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -400,11 +403,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(90, 9);
+            this.label2.Location = new System.Drawing.Point(99, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 24);
+            this.label2.Size = new System.Drawing.Size(78, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ch/sec";
+            this.label2.Text = "0 ch/sec";
             // 
             // label3
             // 
@@ -484,11 +487,33 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "1";
             // 
-            // Form1
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(14, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 25);
+            this.label9.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(13, 112);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 25);
+            this.label10.TabIndex = 13;
+            // 
+            // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 368);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.trackBar1);
@@ -502,7 +527,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.KeyPreview = true;
-            this.Name = "Form1";
+            this.Name = "View";
             this.Text = "Клавиатурный тренажер";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -554,6 +579,8 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 
