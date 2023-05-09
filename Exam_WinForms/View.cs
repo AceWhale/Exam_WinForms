@@ -16,10 +16,10 @@ namespace Exam_WinForms
     {
         Button[] buttons;
         static Controller controller;
-        Task time;
+        List<Task> time = new List<Task>();
         string text;
         static int timer = 0;
-        int mistake = 0;
+        int mistake = 0, max_speed = 0;
         static bool end = false;
         static Label label_time = null, label_speed = null;
         public View()
@@ -47,6 +47,11 @@ namespace Exam_WinForms
                     controller.TapCheck(Convert.ToChar(e.KeyValue + 32));
             }
             label_speed.Text = controller.GetSpeed().ToString() + " ch/sec";
+            if (controller.GetSpeed() > max_speed)
+            {
+                max_speed = controller.GetSpeed();
+                label12.Text = max_speed.ToString() + " ch/sec";
+            }
             foreach (Button x in buttons)
                 if (x.Text == e.KeyData.ToString())
                     x.BackColor = Color.LightBlue;
@@ -65,11 +70,17 @@ namespace Exam_WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label10.Text = "";
+            mistake = 0;
+            timer = 0;
+            max_speed = 0;
+            end = false;
             label9.Text = controller.SetText(trackBar1) + "\n";
+            label10.Text = "";
             text = controller.SetText(trackBar1);
             button1.Enabled = false;
-            time = new Task(Timer);
-            time.Start();
+            time.Add(new Task(Timer));
+            time[time.Count - 1].Start();
             controller.StartThreadChPerSec();
         }
         private static void Timer()
@@ -87,11 +98,19 @@ namespace Exam_WinForms
             label6.Text = mistake.ToString();
         }
         public void Correct(char a) => label10.Text += a;
+
+        private void результатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.ResultView();
+        }
+
         public void End()
         {
+            button1.Enabled = true;
             end = true;
-            time.Wait();
-            MessageBox.Show($"Ошибок: {mistake}\nУровень: {trackBar1.Value+1}\nВремя: {timer}", "Result");
+            time[time.Count - 1].Wait();
+            controller.AddResult(mistake, trackBar1.Value, timer, max_speed);
+            MessageBox.Show($"Ошибок: {mistake}\nСкорость: {max_speed} сим\\с\nВремя: {timer} сек", $"Уровень: {trackBar1.Value + 1}");
         }
     }
 }

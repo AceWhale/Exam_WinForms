@@ -9,10 +9,11 @@ using System.Windows.Forms;
 
 namespace Exam_WinForms
 {
-    internal class Controller
+    public class Controller
     {
         Database db;
         View view;
+        Result res;
         public Controller(View view) { this.view = view; db = new Database(this); }
         public string SetText(TrackBar a) => db.SetText(a.Value);
         public void StartThreadChPerSec() => db.StartChPerSec();
@@ -22,5 +23,12 @@ namespace Exam_WinForms
         public void Correct(char a) => view.Correct(a);
         public void TapCheck(char a) => db.TextCheck(a);
         public void End() => view.End();
+        public void AddResult(int mistake, int level, int timer, int speed) => db.AddResult(mistake, level, timer, speed);
+        public void ResultView()
+        {
+            res = new Result(this);
+            res.ShowMenu();
+        }
+        public string GetResult() { return db.GetResult(); }
     }
 }
