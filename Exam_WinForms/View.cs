@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Exam_WinForms
 {
@@ -20,7 +21,7 @@ namespace Exam_WinForms
         string text;
         static int timer = 0;
         int mistake = 0, max_speed = 0;
-        static bool end = false;
+        static bool end = false, mode = true;
         static Label label_time = null, label_speed = null;
         public View()
         {
@@ -59,8 +60,18 @@ namespace Exam_WinForms
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            foreach (Button x in buttons)
-                x.BackColor = Color.White;
+            if (mode)
+                foreach (Button x in buttons)
+                {
+                    x.BackColor = Color.White;
+                    x.ForeColor = Color.Black;
+                }
+            else
+                foreach (Button x in buttons)
+                {
+                    x.BackColor = Color.Gray;
+                    x.ForeColor = Color.White;
+                }
         }
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
@@ -70,6 +81,7 @@ namespace Exam_WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button29.Enabled = false;
             label10.Text = "";
             mistake = 0;
             timer = 0;
@@ -99,6 +111,90 @@ namespace Exam_WinForms
         }
         public void Correct(char a) => label10.Text += a;
 
+        private void notifyIcon1_DoubleClick(object sender, EventArgs e)
+        {
+            Show();
+        }
+
+        private void View_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                notifyIcon1.ShowBalloonTip(3000, "Тренажер", "Таймер остановился, после открытия таймер снова запуститься", ToolTipIcon.Info);
+                notifyIcon1.Visible = true;
+                end = true;
+                if(time.Count !=0)
+                    time[time.Count - 1].Wait();
+                Hide();
+            }
+        }
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            Show();
+            end = false;
+            if (time.Count != 0)
+            {
+                time.Add(new Task(Timer));
+                time[time.Count - 1].Start();
+            }
+            WindowState = FormWindowState.Normal;
+            notifyIcon1.Visible = false;
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            if (mode)
+            {
+                BackColor = Color.Black;
+                foreach (Button x in buttons)
+                {
+                    x.BackColor = Color.Gray;
+                    x.ForeColor = Color.White;
+                }
+                foreach (Control item in this.Controls)
+                {
+                    if (item is Label)
+                        item.ForeColor = Color.White;
+                    if (item is Button)
+                    {
+                        item.BackColor = Color.Black;
+                        item.ForeColor = Color.White;
+                    }
+                    if (item is TextBox)
+                        item.BackColor = Color.Black;
+                }
+                label9.BackColor = Color.Black;
+                label10.BackColor = Color.Black;
+                button29.BackgroundImage = Properties.Resources.free_icon_sun_146182;
+                mode = false;
+            }
+            else
+            {
+                BackColor = Color.WhiteSmoke;
+                foreach (Button x in buttons)
+                {
+                    x.BackColor = Color.White;
+                    x.ForeColor = Color.Black;
+                }
+                foreach (Control item in this.Controls)
+                {
+                    if (item is Label)
+                        item.ForeColor = Color.Black;
+                    if (item is Button)
+                    {
+                        item.BackColor = Color.White;
+                        item.ForeColor = Color.Black;
+                    }
+                    if (item is TextBox)
+                        item.BackColor = Color.White;
+                }
+                label9.BackColor = Color.White;
+                label10.BackColor = Color.White;
+                button29.BackgroundImage = Properties.Resources._37857;
+                mode = true;
+            }
+        }
+
         private void результатыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controller.ResultView();
@@ -107,6 +203,7 @@ namespace Exam_WinForms
         public void End()
         {
             button1.Enabled = true;
+            button29.Enabled = true;
             end = true;
             time[time.Count - 1].Wait();
             controller.AddResult(mistake, trackBar1.Value, timer, max_speed);

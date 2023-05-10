@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button28 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
@@ -73,22 +74,13 @@
             this.результатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(661, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Запуск";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -127,7 +119,7 @@
             // 
             // button28
             // 
-            this.button28.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button28.BackColor = System.Drawing.Color.White;
             this.button28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button28.Location = new System.Drawing.Point(484, 130);
             this.button28.Name = "button28";
@@ -138,7 +130,7 @@
             // 
             // button27
             // 
-            this.button27.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button27.BackColor = System.Drawing.Color.White;
             this.button27.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button27.Location = new System.Drawing.Point(426, 130);
             this.button27.Name = "button27";
@@ -149,7 +141,7 @@
             // 
             // button26
             // 
-            this.button26.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button26.BackColor = System.Drawing.Color.White;
             this.button26.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button26.Location = new System.Drawing.Point(368, 130);
             this.button26.Name = "button26";
@@ -160,7 +152,7 @@
             // 
             // button25
             // 
-            this.button25.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button25.BackColor = System.Drawing.Color.White;
             this.button25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button25.Location = new System.Drawing.Point(310, 130);
             this.button25.Name = "button25";
@@ -171,7 +163,7 @@
             // 
             // button24
             // 
-            this.button24.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button24.BackColor = System.Drawing.Color.White;
             this.button24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button24.Location = new System.Drawing.Point(252, 130);
             this.button24.Name = "button24";
@@ -182,7 +174,7 @@
             // 
             // button23
             // 
-            this.button23.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button23.BackColor = System.Drawing.Color.White;
             this.button23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button23.Location = new System.Drawing.Point(194, 130);
             this.button23.Name = "button23";
@@ -193,7 +185,7 @@
             // 
             // button22
             // 
-            this.button22.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button22.BackColor = System.Drawing.Color.White;
             this.button22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button22.Location = new System.Drawing.Point(136, 130);
             this.button22.Name = "button22";
@@ -204,7 +196,7 @@
             // 
             // button21
             // 
-            this.button21.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button21.BackColor = System.Drawing.Color.White;
             this.button21.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button21.Location = new System.Drawing.Point(78, 130);
             this.button21.Name = "button21";
@@ -215,7 +207,7 @@
             // 
             // button20
             // 
-            this.button20.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button20.BackColor = System.Drawing.Color.White;
             this.button20.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button20.Location = new System.Drawing.Point(511, 72);
             this.button20.Name = "button20";
@@ -226,7 +218,7 @@
             // 
             // button19
             // 
-            this.button19.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button19.BackColor = System.Drawing.Color.White;
             this.button19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button19.Location = new System.Drawing.Point(453, 72);
             this.button19.Name = "button19";
@@ -237,7 +229,7 @@
             // 
             // button18
             // 
-            this.button18.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button18.BackColor = System.Drawing.Color.White;
             this.button18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button18.Location = new System.Drawing.Point(395, 72);
             this.button18.Name = "button18";
@@ -248,7 +240,7 @@
             // 
             // button17
             // 
-            this.button17.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button17.BackColor = System.Drawing.Color.White;
             this.button17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button17.Location = new System.Drawing.Point(337, 72);
             this.button17.Name = "button17";
@@ -259,7 +251,7 @@
             // 
             // button16
             // 
-            this.button16.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button16.BackColor = System.Drawing.Color.White;
             this.button16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button16.Location = new System.Drawing.Point(279, 72);
             this.button16.Name = "button16";
@@ -270,7 +262,7 @@
             // 
             // button15
             // 
-            this.button15.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button15.BackColor = System.Drawing.Color.White;
             this.button15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button15.Location = new System.Drawing.Point(221, 72);
             this.button15.Name = "button15";
@@ -281,7 +273,7 @@
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button14.BackColor = System.Drawing.Color.White;
             this.button14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button14.Location = new System.Drawing.Point(163, 72);
             this.button14.Name = "button14";
@@ -292,7 +284,7 @@
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button13.BackColor = System.Drawing.Color.White;
             this.button13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button13.Location = new System.Drawing.Point(105, 72);
             this.button13.Name = "button13";
@@ -303,7 +295,7 @@
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button12.BackColor = System.Drawing.Color.White;
             this.button12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button12.Location = new System.Drawing.Point(47, 72);
             this.button12.Name = "button12";
@@ -314,7 +306,7 @@
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button11.BackColor = System.Drawing.Color.White;
             this.button11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button11.Location = new System.Drawing.Point(548, 14);
             this.button11.Name = "button11";
@@ -325,7 +317,7 @@
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button10.BackColor = System.Drawing.Color.White;
             this.button10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button10.Location = new System.Drawing.Point(490, 14);
             this.button10.Name = "button10";
@@ -336,7 +328,7 @@
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button9.BackColor = System.Drawing.Color.White;
             this.button9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button9.Location = new System.Drawing.Point(432, 14);
             this.button9.Name = "button9";
@@ -347,7 +339,7 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button8.BackColor = System.Drawing.Color.White;
             this.button8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.Location = new System.Drawing.Point(374, 14);
             this.button8.Name = "button8";
@@ -358,7 +350,7 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button7.BackColor = System.Drawing.Color.White;
             this.button7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.Location = new System.Drawing.Point(316, 14);
             this.button7.Name = "button7";
@@ -369,7 +361,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.BackColor = System.Drawing.Color.White;
             this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.Location = new System.Drawing.Point(258, 14);
             this.button6.Name = "button6";
@@ -380,7 +372,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(200, 14);
             this.button5.Name = "button5";
@@ -391,7 +383,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(142, 14);
             this.button4.Name = "button4";
@@ -402,7 +394,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(84, 14);
             this.button3.Name = "button3";
@@ -413,7 +405,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(26, 14);
             this.button2.Name = "button2";
@@ -464,6 +456,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(12, 112);
             this.textBox1.Multiline = true;
@@ -523,7 +516,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(13, 117);
             this.label9.Name = "label9";
@@ -533,7 +526,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.Location = new System.Drawing.Point(13, 150);
             this.label10.Name = "label10";
@@ -579,12 +572,47 @@
             this.label12.TabIndex = 16;
             this.label12.Text = "0 ch/sec";
             // 
+            // button29
+            // 
+            this.button29.BackgroundImage = global::Exam_WinForms.Properties.Resources._37857;
+            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button29.Location = new System.Drawing.Point(12, 197);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(40, 40);
+            this.button29.TabIndex = 17;
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(661, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 39);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Запуск";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIcon1.BalloonTipText = "Тренажер запущен";
+            this.notifyIcon1.BalloonTipTitle = "Тренажер";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Тренажер";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(798, 404);
+            this.Controls.Add(this.button29);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -602,12 +630,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "View";
             this.Text = "Клавиатурный тренажер";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.Resize += new System.EventHandler(this.View_Resize);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -664,6 +694,8 @@
         private System.Windows.Forms.ToolStripMenuItem результатыToolStripMenuItem;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 
