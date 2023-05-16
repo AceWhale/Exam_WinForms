@@ -77,6 +77,8 @@
             this.button29 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label13 = new System.Windows.Forms.Label();
+            this.button30 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -588,7 +590,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(661, 37);
+            this.button1.Location = new System.Drawing.Point(661, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 39);
             this.button1.TabIndex = 0;
@@ -606,17 +608,43 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.Click += new System.EventHandler(this.notifyIcon1_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(13, 122);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 25);
+            this.label13.TabIndex = 18;
+            // 
+            // button30
+            // 
+            this.button30.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button30.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button30.BackgroundImage")));
+            this.button30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button30.Location = new System.Drawing.Point(661, 72);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(125, 39);
+            this.button30.TabIndex = 19;
+            this.button30.Text = "Стоп";
+            this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(798, 404);
+            this.Controls.Add(this.button30);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button29);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.trackBar1);
@@ -633,6 +661,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "View";
             this.Text = "Клавиатурный тренажер";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -696,6 +725,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button30;
     }
 }
 

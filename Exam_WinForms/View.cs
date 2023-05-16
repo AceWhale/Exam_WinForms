@@ -20,12 +20,13 @@ namespace Exam_WinForms
         List<Task> time = new List<Task>();
         string text;
         static int timer = 0;
-        int mistake = 0, max_speed = 0;
+        int mistake = 0, max_speed = 0, pos = 13;
         static bool end = false, mode = true;
         static Label label_time = null, label_speed = null;
         public View()
         {
             InitializeComponent();
+            button30.Visible = false;
             textBox1.Enabled = false;
             label_time = label4;
             label_speed = label2;
@@ -81,6 +82,7 @@ namespace Exam_WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button30.Visible = true;
             button29.Enabled = false;
             label10.Text = "";
             mistake = 0;
@@ -107,10 +109,17 @@ namespace Exam_WinForms
         public void Mistake()
         {
             mistake++;
+            label13.Location = new Point(pos, label13.Location.Y);
+            label13.BackColor = Color.Red;
             label6.Text = mistake.ToString();
         }
-        public void Correct(char a) => label10.Text += a;
-
+        public void Correct(char a)
+        {
+            label10.Text += a;
+            label13.Location = new Point(pos, label13.Location.Y);
+            label13.BackColor = Color.Green;
+            pos += 9;
+        }
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
             Show();
@@ -128,6 +137,17 @@ namespace Exam_WinForms
                 Hide();
             }
         }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            button30.Visible = false;
+            label13.Visible = false;
+            button1.Enabled = true;
+            button29.Enabled = true;
+            end = true;
+            time[time.Count - 1].Wait();
+        }
+
         private void notifyIcon1_Click(object sender, EventArgs e)
         {
             Show();
@@ -202,6 +222,7 @@ namespace Exam_WinForms
 
         public void End()
         {
+            label13.Visible = false;
             button1.Enabled = true;
             button29.Enabled = true;
             end = true;
